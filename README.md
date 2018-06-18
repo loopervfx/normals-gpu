@@ -13,9 +13,9 @@ A two pass method would be more efficient, but convoluted given TouchDesigner's 
 This could also be adapted to a vertex shader only approach with the proper vertex attributes, or adapted to other OpenGL based engines/implementations. 
 
 Special Thanks: 
-Vincent Houzé http://vincenthouze.com
-Elburz Sorkhabi http://elburz.io
-Matthew Ragan http://matthewragan.com
+Vincent Houzé http://vincenthouze.com 
+Elburz Sorkhabi http://elburz.io 
+Matthew Ragan http://matthewragan.com 
 
 ![Stanford Bunny (Regular)](images/stanford_bunny_regular.png)
 ![Stanford Bunny (Twisted)](images/stanford_bunny_twisted.png)
