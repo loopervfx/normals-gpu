@@ -6,11 +6,16 @@ Includes a real-time GPU accelerated "smooth" per vertex normal computation tech
 
 This allows for non-uniform scaling and twisting / warping of the mesh while retaining smooth surface lighting.
 
-![Stanford Bunny (Regular)](images/stanford_bunny_regular.png)
-![Stanford Bunny (Twisted)](images/stanford_bunny_twisted.png)
-
 Face normals and Vertex normals are both naively calculated here in a single shader pass using a nested loop for adjacent triangles.
 
 A two pass method would be more efficient, but convoluted given TouchDesigner's (current) semi-fixed render pipeline for MATs / Materials.
 
 This could also be adapted to a vertex shader only approach with the proper vertex attributes, or adapted to other OpenGL based engines/implementations. 
+
+Special Thanks: 
+Vincent Houzé http://vincenthouze.com
+Elburz Sorkhabi http://elburz.io
+Matthew Ragan http://matthewragan.com
+
+![Stanford Bunny (Regular)](images/stanford_bunny_regular.png)
+![Stanford Bunny (Twisted)](images/stanford_bunny_twisted.png)
