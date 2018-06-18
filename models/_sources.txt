@@ -1,0 +1,8 @@
+bunny.obj
+Stanford University | https://graphics.stanford.edu/data/3Dscanrep/
+
+deer.obj
+Snippysnappets | https://free3d.com/3d-model/low-poly-deer-72513.html
+
+super_human.obj
+Davyd Vidiger | https://sketchfab.com/models/7aa58e978b9f4357b8e73d8e0440c896
