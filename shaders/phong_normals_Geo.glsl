@@ -100,7 +100,7 @@ void main() {
 				// https://www.opengl.org/archives/resources/code/samples/sig99/advanced99/notes/node15.html
 
 				faceNorm = normalize(cross( worldFacePos[0] - worldFacePos[1],
-											worldFacePos[0] - worldFacePos[2] ));
+								worldFacePos[0] - worldFacePos[2] ));
 				oVert.worldSpaceNorm = faceNorm;
 
 				break;
@@ -112,8 +112,8 @@ void main() {
 				// Face normals and Vertex normals are both naively calculated here
 				// in a single shader pass using a nested loop for adjacent triangles.
 
-				// A two pass method would be more efficient, but convoluted given
-				// TouchDesigner's semi-fixed render pipeline for MATs / Materials.
+				// A two pass method would be more efficient, but perhaps convoluted 
+				// within TouchDesigner's standard render pipeline for MATs / Materials.
 
 				// fetch array indices
 				primVertIndex[i] = (iVert[i].primIndex * 3) + i;
@@ -145,7 +145,7 @@ void main() {
 
 					// use position vectors to calculate face normal for this adjacent triangle
 					faceAdjNorm[j] = normalize(cross( primsAdjPos[0] - primsAdjPos[1],
-													 primsAdjPos[0] - primsAdjPos[2] ));
+										primsAdjPos[0] - primsAdjPos[2] ));
 				}
 				// init vertex normal vector
 				vec3 vertexNorm = vec3(0.0);
