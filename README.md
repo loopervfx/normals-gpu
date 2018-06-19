@@ -1,6 +1,6 @@
 A demonstration of world-space normal deformation/computation techniques using geometry shaders, implemented in Derivative Touchdesigner 64-Bit Build 2018.23470. https://www.derivative.ca
 
-Created for a talk given at TouchIn NYC 2018, presented by Volvox Labs http://volvoxlabs.com and LiveX https://livex.tv/
+Created for a talk given at TouchIn NYC May 2018, presented by Volvox Labs http://volvoxlabs.com and LiveX https://livex.tv/
 
 Includes a real-time GPU accelerated "smooth" per vertex normal computation technique that I developed by emulating common CPU based methods for computing vertex normals for triangulated meshes.
 
