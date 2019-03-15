@@ -117,11 +117,11 @@ void main() {
 
 				// fetch array indices
 				primVertIndex[i] = (iVert[i].primIndex * 3) + i;
-				pointIndex[i] = int(texelFetchBuffer(sVertexByPrim, primVertIndex[i]).r);
+				pointIndex[i] = int(texelFetch(sVertexByPrim, primVertIndex[i]).r);
 
 				// fetch point offset indices
-				int pointOffsetStart = int(texelFetchBuffer(sPointOffset, pointIndex[i]).r);
-				int pointOffsetEnd = int(texelFetchBuffer(sPointOffset, pointIndex[i]+1).r);
+				int pointOffsetStart = int(texelFetch(sPointOffset, pointIndex[i]).r);
+				int pointOffsetEnd = int(texelFetch(sPointOffset, pointIndex[i]+1).r);
 
 				// set range for adjacency loop
 				int numPrims = pointOffsetEnd - pointOffsetStart;
@@ -133,10 +133,10 @@ void main() {
 					for(int k = 0; k < 3; k++) {
 
 						// fetch position index with point offset index
-						primsAdjIndex[k] = int(texelFetchBuffer(sVertexByPoint, pointOffsetStart+j).r * 3 + k);
+						primsAdjIndex[k] = int(texelFetch(sVertexByPoint, pointOffsetStart+j).r * 3 + k);
 
 						// fetch position vector with adjacent triangle prim index
-						primsAdjPos[k] = vec3(texelFetchBuffer(sPositionByPrim, primsAdjIndex[k]));
+						primsAdjPos[k] = vec3(texelFetch(sPositionByPrim, primsAdjIndex[k]));
 
 						// Twist matrix multiply with adjacent triangle positions & TDDeform
 						primsAdjPos[k] = TDDeform(twistDeform(primsAdjPos[k], i), i);
